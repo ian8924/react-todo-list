@@ -16,12 +16,15 @@ const Edit = ({ add }) => {
     setTime(e.target.value);
   }
 
+
+  const [id, setID] = useState(v4())
+
   function addItem() {
     add((pre) => {
       return [
         ...pre,
         {
-          id: v4(),
+          id : v4(),
           note,
           date,
           time,
@@ -29,8 +32,6 @@ const Edit = ({ add }) => {
       ];
     });
   }
-
-  // console.log(note,date,time)
 
   return (
     <div>

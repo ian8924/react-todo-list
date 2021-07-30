@@ -1,14 +1,12 @@
 import Item from "./Item";
 
-const arr = [];
 
-const List = ({ listData }) => {
-  console.log(listData);
+const List = ({ listData , deleteData }) => {
   return (
     <div className="list">
       {listData.map((item) => {
-        const { time, date, note } = item;
-        return <Item key={date} note={note} date={date} time={time} />;
+        const { time, date, note ,id } = item;
+        return <Item key={id} id={id} note={note} date={date} time={time} deleteData={deleteData}/>;
       })}
     </div>
   );
