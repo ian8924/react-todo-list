@@ -12,8 +12,8 @@ const Item = ({ id ,note, date, time, deleteData }) => {
   return (
     <div className="item">
       <button onClick={ deleteIt } className="remove">
-        <p>{note}</p>
-        <p>{`${date} ${time}`}</p>
+        <p>{ note }</p>
+        <p>{`${ date } ${ time }`}</p>
         刪除
       </button>
     </div>
